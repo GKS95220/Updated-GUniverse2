@@ -64,13 +64,13 @@ export default function Footer() {
             <ul className="mt-5 space-y-3 text-sm text-slate-500">
               <li className="flex items-center gap-2.5">
                 <Mail size={14} className="text-cyan-400" />
-                <a href="mailto:pilots@guniverse.health" className="transition-colors hover:text-cyan-300">
-                  pilots@guniverse.health
+                <a href="mailto:g.k.sharma95220@gmail.com" className="transition-colors hover:text-cyan-300">
+                  g.k.sharma95220@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <MapPin size={14} className="text-cyan-400" />
-                San Francisco, CA & Zurich, CH
+                New Delhi, India
               </li>
             </ul>
           </div>
