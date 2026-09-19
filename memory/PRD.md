@@ -36,11 +36,11 @@ Sleek, modern, futuristic, professional landing page for GUniverse — a pre-see
 - Logo: user will add manually — text logo retained; swap in Navbar.jsx `Logo` component (also used in footer & admin).
 - Test playbook saved to /app/auth_testing.md; credentials in /app/memory/test_credentials.md.
 
-## Backlog
-- P0: User to provide real notification email for ADMIN_NOTIFY_EMAIL
-- P1: Swap in real logo image, real social links
-- P2: Downloadable pitch deck PDF, lead export (CSV), lead status tracking in dashboard
+## Implemented (2026-09-19, iteration 3)
+- Real notification inbox connected: lead alerts now send to G.k.sharma95220@gmail.com (verified 202 Accepted via managed Resend proxy)
+- User's real logo integrated: cropped orbital mark saved to frontend/public/guniverse-logo.png, used in nav, footer, and admin login via the shared Logo component
 
-## Next Tasks
-- Set ADMIN_NOTIFY_EMAIL to the user's real inbox and restart backend
-- Replace Logo component content when logo file arrives
+## Backlog
+- P0: None
+- P1: Real social links (LinkedIn URL)
+- P2: Downloadable pitch deck PDF, lead CSV export, reply-to-lead from dashboard, favicon from logo

@@ -13,9 +13,13 @@ const links = [
 
 export const Logo = ({ testid }) => (
   <a href="#top" data-testid={testid} className="flex items-center gap-2.5 group">
-    <span className="relative flex h-8 w-8 items-center justify-center">
-      <span className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 to-violet-500 opacity-80 blur-[6px] transition-opacity duration-500 group-hover:opacity-100" />
-      <span className="relative h-3.5 w-3.5 rounded-full bg-gradient-to-tr from-cyan-300 to-violet-400" />
+    <span className="relative flex h-9 w-9 items-center justify-center">
+      <span className="absolute inset-0 rounded-xl bg-gradient-to-tr from-cyan-400 to-violet-500 opacity-0 blur-[8px] transition-opacity duration-500 group-hover:opacity-70" />
+      <img
+        src="/guniverse-logo.png"
+        alt="GUniverse logo"
+        className="relative h-9 w-9 rounded-xl border border-slate-700/60 object-cover shadow-[0_0_14px_rgba(139,92,246,0.3)]"
+      />
     </span>
     <span className="font-display text-lg font-bold tracking-tight text-white">
       G<span className="text-gradient-cv">Universe</span>
