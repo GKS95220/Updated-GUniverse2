@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-slate-800/70 pt-8 sm:flex-row">
-          <p className="text-xs text-slate-600">© 2026 GUniverse Inc. All rights reserved.</p>
+          <p className="text-xs text-slate-600">© 2026 GUniversehealth.com. All rights reserved.</p>
           <p className="font-mono-gu text-xs text-slate-600">Pioneering Spatial Digital Therapeutics</p>
           <a href="/admin" data-testid="footer-admin-link" className="text-xs text-slate-700 transition-colors duration-300 hover:text-cyan-300">
             Admin

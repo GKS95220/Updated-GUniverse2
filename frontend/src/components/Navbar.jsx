@@ -22,7 +22,7 @@ export const Logo = ({ testid }) => (
       />
     </span>
     <span className="font-display text-lg font-bold tracking-tight text-white">
-      G<span className="text-gradient-cv">Universe</span>
+      G<span className="text-gradient-cv">Universehealth</span><span className="text-slate-500">.com</span>
     </span>
   </a>
 );
