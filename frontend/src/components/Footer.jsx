@@ -11,6 +11,8 @@ const quickLinks = [
 
 const resources = ["Privacy Policy", "Terms of Service", "Clinical Evidence", "Investor Relations"];
 
+const resourceHrefs = { "Privacy Policy": "#top", "Terms of Service": "#top", "Clinical Evidence": "#top", "Investor Relations": "/admin" };
+
 export default function Footer() {
   return (
     <footer data-testid="footer-section" className="relative border-t border-slate-800/70 bg-[#04060f]">
@@ -50,7 +52,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               {resources.map((r) => (
                 <li key={r}>
-                  <a href="#top" className="text-sm text-slate-500 transition-colors duration-300 hover:text-cyan-300">
+                  <a href={resourceHrefs[r]} className="text-sm text-slate-500 transition-colors duration-300 hover:text-cyan-300">
                     {r}
                   </a>
                 </li>
@@ -76,6 +78,9 @@ export default function Footer() {
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-slate-800/70 pt-8 sm:flex-row">
           <p className="text-xs text-slate-600">© 2026 GUniverse Inc. All rights reserved.</p>
           <p className="font-mono-gu text-xs text-slate-600">Pioneering Spatial Digital Therapeutics</p>
+          <a href="/admin" data-testid="footer-admin-link" className="text-xs text-slate-700 transition-colors duration-300 hover:text-cyan-300">
+            Admin
+          </a>
         </div>
       </div>
     </footer>

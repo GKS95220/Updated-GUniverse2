@@ -29,12 +29,18 @@ Sleek, modern, futuristic, professional landing page for GUniverse — a pre-see
 - Lead form verified end-to-end (UI submit → toast → success state → stored in MongoDB)
 - All interactive elements carry data-testid attributes per design guidelines
 
+## Implemented (2026-09-19, iteration 2)
+- Email alerts: every pilot form submission triggers a branded notification email via Emergent-managed Resend proxy (verified 202 Accepted). Recipient is ADMIN_NOTIFY_EMAIL in backend/.env — currently the Resend test sink until the user provides a real inbox.
+- Private Leads Dashboard at /admin: JWT cookie auth (access + refresh, httpOnly), bcrypt hashing, brute-force lockout (5 tries / 15 min), seeded admin, leads table with stats (total, orgs, latest). Footer "Admin" link.
+- Pitch Highlights: hero button opens an animated 7-chapter investor pitch modal (Vision → The Ask) with ESC/backdrop close and CTA into the contact form.
+- Logo: user will add manually — text logo retained; swap in Navbar.jsx `Logo` component (also used in footer & admin).
+- Test playbook saved to /app/auth_testing.md; credentials in /app/memory/test_credentials.md.
+
 ## Backlog
-- P0: None blocking
-- P1: Email notification on new lead (Resend — user opted out for now), admin view for leads, real logo image (user will provide)
-- P2: Pitch deck modal/download for "View Pitch Highlights", blog/clinical evidence pages, i18n
+- P0: User to provide real notification email for ADMIN_NOTIFY_EMAIL
+- P1: Swap in real logo image, real social links
+- P2: Downloadable pitch deck PDF, lead export (CSV), lead status tracking in dashboard
 
 ## Next Tasks
-- Swap in user's logo image when provided
-- Add Resend email notifications if requested
-- Add /admin leads dashboard if requested
+- Set ADMIN_NOTIFY_EMAIL to the user's real inbox and restart backend
+- Replace Logo component content when logo file arrives

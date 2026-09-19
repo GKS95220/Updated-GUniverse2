@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "@/App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lenis from "lenis";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/Navbar";
@@ -13,8 +14,9 @@ import Traction from "@/components/Traction";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Admin from "@/pages/Admin";
 
-function App() {
+function Landing() {
   useEffect(() => {
     const lenis = new Lenis({ duration: 1.25, smoothWheel: true });
     let frame;
@@ -42,7 +44,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App relative">
+    <>
       <Navbar />
       <main>
         <Hero />
@@ -56,6 +58,19 @@ function App() {
         <Contact />
       </main>
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <div className="App relative">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
+      </BrowserRouter>
       <Toaster theme="dark" position="bottom-right" />
     </div>
   );

@@ -1,7 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight, PlayCircle, Sparkles } from "lucide-react";
 import HeroCanvas from "@/components/HeroCanvas";
+import PitchModal from "@/components/PitchModal";
 
 const lines = ["Transforming Healthcare", "& Education Through", "Spatial Computing"];
 
@@ -20,6 +21,7 @@ export const RevealLine = ({ children, delay, className }) => (
 
 export default function Hero() {
   const ref = useRef(null);
+  const [pitchOpen, setPitchOpen] = useState(false);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [0, 220]);
   const opacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
@@ -78,14 +80,14 @@ export default function Hero() {
               Explore Platform
               <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
             </a>
-            <a
-              href="#traction"
+            <button
+              onClick={() => setPitchOpen(true)}
               data-testid="hero-view-pitch-btn"
               className="group inline-flex items-center gap-2 rounded-full border border-slate-600/70 bg-slate-900/40 px-7 py-3.5 text-sm font-semibold text-slate-200 backdrop-blur-md transition-all duration-300 hover:border-cyan-400/60 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(0,242,254,0.15)]"
             >
               <PlayCircle size={16} className="text-cyan-400" />
               View Pitch Highlights
-            </a>
+            </button>
           </motion.div>
 
           <motion.div
@@ -103,6 +105,8 @@ export default function Hero() {
           </motion.div>
         </div>
       </motion.div>
+
+      <PitchModal open={pitchOpen} onClose={() => setPitchOpen(false)} />
 
       <motion.div
         initial={{ opacity: 0 }}
