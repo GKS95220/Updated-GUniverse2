@@ -1,0 +1,245 @@
+{
+  "project_identity": {
+    "name": "GUniverse",
+    "description": "Pre-seed startup operating at the intersection of Extended Reality (XR), spatial computing, and digital therapeutics.",
+    "theme_archetype": "Electric Cyber-Clinical / Spatial Tech (Archetype 7 meets Archetype 1)",
+    "tone": "Visionary, clinical yet cutting-edge, tech-forward, trustworthy",
+    "core_mode": "dark"
+  },
+  "typography": {
+    "font_family_heading": "Outfit, Clash Display, sans-serif",
+    "font_family_body": "Inter, DM Sans, sans-serif",
+    "font_family_mono": "JetBrains Mono, Source Code Pro, monospace",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-normal",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base text-slate-300 leading-relaxed",
+      "body_sm": "text-sm text-slate-400 leading-normal",
+      "overline": "text-xs uppercase font-mono tracking-[0.2em] text-cyan-400 font-semibold"
+    }
+  },
+  "color_palette": {
+    "background": {
+      "deep_space": "#050714",
+      "canvas_dark": "#0a0d24",
+      "surface_glass": "rgba(15, 23, 42, 0.65)",
+      "surface_card": "rgba(20, 27, 56, 0.5)",
+      "overlay_backdrop": "rgba(5, 7, 20, 0.8)"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at 50% 30%, rgba(0, 242, 254, 0.15) 0%, rgba(139, 92, 246, 0.12) 40%, rgba(5, 7, 20, 0) 70%)",
+      "neon_border": "linear-gradient(135deg, rgba(0, 242, 254, 0.6) 0%, rgba(139, 92, 246, 0.6) 100%)",
+      "cyber_text": "linear-gradient(90deg, #ffffff 0%, #00f2fe 50%, #a855f7 100%)",
+      "cyan_violet_accent": "linear-gradient(135deg, #00f2fe 0%, #7c3aed 100%)"
+    },
+    "accents": {
+      "cyan_electric": "#00f2fe",
+      "deep_indigo": "#0f172a",
+      "electric_violet": "#8b5cf6",
+      "vivid_purple": "#7c3aed",
+      "emerald_pulse": "#10b981",
+      "glow_cyan": "rgba(0, 242, 254, 0.4)"
+    },
+    "text": {
+      "primary": "#f8fafc",
+      "secondary": "#94a3b8",
+      "muted": "#64748b",
+      "highlight": "#00f2fe"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "header": "backdrop-blur-xl bg-[#050714]/75 border-b border-cyan-500/20 shadow-[0_4px_30px_rgba(0,242,254,0.05)]",
+      "card": "backdrop-blur-md bg-slate-900/40 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]",
+      "modal": "backdrop-blur-2xl bg-[#0a0d24]/90 border border-violet-500/30 shadow-[0_0_50px_rgba(139,92,246,0.2)]"
+    },
+    "neon_accents": {
+      "box_glow": "shadow-[0_0_20px_rgba(0,242,254,0.25)]",
+      "violet_glow": "shadow-[0_0_25px_rgba(139,92,246,0.3)]",
+      "text_glow": "drop-shadow-[0_0_12px_rgba(0,242,254,0.5)]"
+    },
+    "textures": {
+      "grid_lines": "bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem]",
+      "dot_matrix": "bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:16px_16px]"
+    }
+  },
+  "layout_and_sections": {
+    "header": {
+      "description": "Sticky top glass navigation bar with brand logo, key links, and CTA",
+      "logo": "GUniverse (with glowing spatial orb icon)",
+      "nav_links": [
+        {"name": "Platform", "href": "#platform"},
+        {"name": "Applications", "href": "#applications"},
+        {"name": "Technology", "href": "#technology"},
+        {"name": "Traction", "href": "#traction"},
+        {"name": "About Us", "href": "#about"},
+        {"name": "Contact", "href": "#contact"}
+      ],
+      "cta": "Request Pilot Access",
+      "data_testids": {
+        "nav_container": "header-navigation",
+        "logo": "nav-logo",
+        "link_platform": "nav-link-platform",
+        "link_applications": "nav-link-applications",
+        "link_technology": "nav-link-technology",
+        "link_traction": "nav-link-traction",
+        "link_about": "nav-link-about",
+        "link_contact": "nav-link-contact",
+        "cta_button": "nav-request-pilot-btn"
+      }
+    },
+    "hero": {
+      "headline": "Transforming Healthcare & Education Through Spatial Computing",
+      "subheadline": "GUniverse pioneers evidence-backed XR digital therapeutics and immersive spatial learning environments, redefining clinical outcomes and human performance.",
+      "ctas": [
+        {"label": "Explore Platform", "variant": "primary_cyan", "testid": "hero-explore-platform-btn"},
+        {"label": "View Pitch Highlights", "variant": "secondary_glass", "testid": "hero-view-pitch-btn"}
+      ],
+      "visual": "Interactive 3D canvas with floating spatial nodes/particles & high-tech VR headset preview mockup",
+      "data_testids": {
+        "section": "hero-section",
+        "headline": "hero-headline",
+        "subheadline": "hero-subheadline",
+        "canvas_container": "hero-3d-canvas"
+      }
+    },
+    "problem_solution": {
+      "title": "Closing the Medical & Educational Engagement Gap",
+      "problem_points": [
+        "Traditional rehabilitation has high attrition due to repetitive, non-immersive exercises.",
+        "Static clinical training fails to simulate complex multi-sensory surgical and emergency scenarios.",
+        "Lack of real-time objective bio-spatial analytics in patient recovery protocols."
+      ],
+      "solution_points": [
+        "Spatial Therapeutics: Immersive XR environments trigger neuro-plasticity and boost pain tolerance.",
+        "Interactive Spatial Canvas: Multi-user real-time surgical and clinical simulations.",
+        "Data-Driven Bio-Feedback: Eye-tracking, motor accuracy, and cognitive stress metrics mapped in 3D."
+      ],
+      "data_testids": {
+        "section": "problem-solution-section",
+        "problem_card": "problem-card",
+        "solution_card": "solution-card"
+      }
+    },
+    "core_platform_features": {
+      "mode": "Tetris Bento Grid",
+      "features": [
+        {
+          "title": "Spatial Therapeutics",
+          "desc": "FDA-aligned XR protocols designed for neuro-rehabilitation, pain management, and exposure therapy.",
+          "tag": "Clinical XR",
+          "grid_span": "col-span-1 md:col-span-2 row-span-1"
+        },
+        {
+          "title": "WebXR & Standalone Compatibility",
+          "desc": "Deploy seamlessly across Apple Vision Pro, Meta Quest 3, HTC Vive, and standard Web browsers without app friction.",
+          "tag": "Cross-Platform",
+          "grid_span": "col-span-1 md:col-span-1 row-span-1"
+        },
+        {
+          "title": "Interactive Learning",
+          "desc": "Hands-on multi-user spatial simulations for surgical training, medical residency, and institutional education.",
+          "tag": "Immersive Edu",
+          "grid_span": "col-span-1 md:col-span-1 row-span-1"
+        },
+        {
+          "title": "Data-Driven Insights",
+          "desc": "Continuous kinetic tracking, biometrics aggregation, and patient progress telemetry visualized in real time.",
+          "tag": "Analytics",
+          "grid_span": "col-span-1 md:col-span-2 row-span-1"
+        }
+      ],
+      "data_testids": {
+        "section": "features-grid-section",
+        "feature_card_prefix": "feature-card-"
+      }
+    },
+    "target_markets": {
+      "tab_1": {
+        "title": "Healthcare & Rehab Centers",
+        "use_cases": [
+          "Physical & Occupational Therapy Centers",
+          "Neurological Recovery Units",
+          "Pain Management & Mental Health Clinics",
+          "Pediatric Care & Burn Treatment Facilities"
+        ]
+      },
+      "tab_2": {
+        "title": "Institutions & Enterprises",
+        "use_cases": [
+          "Medical Universities & Surgical Schools",
+          "Corporate Ergonomics & Mental Wellness",
+          "Defense & Aerospace Medical Training",
+          "XR Hardware Vendors & Digital Therapeutics Distribution"
+        ]
+      },
+      "data_testids": {
+        "section": "target-markets-section",
+        "tab_healthcare": "target-market-tab-healthcare",
+        "tab_enterprises": "target-market-tab-enterprises"
+      }
+    },
+    "cta_banner": {
+      "title": "Request Pilot Access or Book a Demo",
+      "subtitle": "Partner with GUniverse to pilot spatial digital therapeutics in your clinical facility or academic institution.",
+      "form_fields": [
+        {"name": "fullName", "label": "Full Name", "placeholder": "Dr. Alex Morgan", "type": "text", "testid": "lead-form-name"},
+        {"name": "email", "label": "Institutional Email", "placeholder": "alex.morgan@hospital.org", "type": "email", "testid": "lead-form-email"},
+        {"name": "organization", "label": "Organization / Institution", "placeholder": "Stanford Health Care", "type": "text", "testid": "lead-form-org"},
+        {"name": "message", "label": "Message / Use Case Interest", "placeholder": "Describe your pilot requirements...", "type": "textarea", "testid": "lead-form-message"}
+      ],
+      "submit_btn_label": "Request Pilot Access",
+      "data_testids": {
+        "section": "cta-banner-section",
+        "form": "lead-capture-form",
+        "submit_button": "lead-form-submit-btn",
+        "success_msg": "lead-form-success-msg"
+      }
+    },
+    "footer": {
+      "brand": "GUniverse",
+      "copyright": "© 2026 GUniverse Inc. All rights reserved. Pioneering Spatial Digital Therapeutics.",
+      "links": [
+        {"label": "Privacy Policy", "href": "#"},
+        {"label": "Terms of Service", "href": "#"},
+        {"label": "Clinical Evidence", "href": "#"},
+        {"label": "Investor Relations", "href": "#"}
+      ],
+      "social": [
+        {"platform": "LinkedIn", "url": "https://linkedin.com", "testid": "footer-linkedin"},
+        {"platform": "Twitter / X", "url": "https://x.com", "testid": "footer-x"},
+        {"platform": "GitHub", "url": "https://github.com", "testid": "footer-github"}
+      ],
+      "contact": {
+        "email": "pilots@guniverse.health",
+        "location": "San Francisco, CA & Zurich, CH"
+      },
+      "data_testids": {
+        "footer_container": "footer-section"
+      }
+    }
+  },
+  "image_urls": {
+    "hero_vr_mockup": "https://images.unsplash.com/photo-1674049406107-f5c1e8258d4a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwyfHxmdXR1cmlzdGljJTIwaGVhbHRoY2FyZSUyMGRpZ2l0YWwlMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc4OTc5MjM4MXww&ixlib=rb-4.1.0&q=85",
+    "spatial_therapy": "https://images.pexels.com/photos/8721326/pexels-photo-8721326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "futuristic_lab": "https://images.pexels.com/photos/12969280/pexels-photo-12969280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "medical_brain_scan": "https://images.unsplash.com/photo-1758691462668-046fd85ceac9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwzfHxmdXR1cmlzdGljJTIwaGVhbHRoY2FyZSUyMGRpZ2l0YWwlMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc4OTc5MjM4MXww&ixlib=rb-4.1.0&q=85",
+    "vr_headset_user": "https://images.pexels.com/photos/3183176/pexels-photo-3183176.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "advanced_hospital_room": "https://images.pexels.com/photos/32026163/pexels-photo-32026163.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  "motion_and_3d": {
+    "hero_3d": "HTML Canvas / Framer Motion particle mesh node canvas with interactive mouse tracking and cyan-violet floating glowing spheres",
+    "scroll_animations": "Staggered fade-up & scale effects using framer-motion with spring physics",
+    "hover_effects": "Glowing neon border trace + subtle 3D tilt transform (translateZ/rotateX) on feature cards"
+  },
+  "instructions_to_main_agent": [
+    "Ensure all components are strictly created/edited in .js / .jsx formats (not .tsx).",
+    "Ensure ALL interactive elements (buttons, inputs, tabs, links, modals) include explicit data-testid attributes as mapped above.",
+    "Implement high-impact dark mode glassmorphism with backdrop-blur-xl, subtle cyan/violet borders, and ambient neon glows.",
+    "Avoid default pure black (#000000); use tinted deep space color (#050714 or #0a0d24) as recommended by E1 rules.",
+    "Ensure toast notifications use sonner package.",
+    "Use Lucide React or Phosphor icons for futuristic UI iconography."
+  ]
+}
