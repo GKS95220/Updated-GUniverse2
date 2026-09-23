@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Headset, SlidersHorizontal, GraduationCap, ShieldCheck } from "lucide-react";
+import { Headset, SlidersHorizontal, GraduationCap } from "lucide-react";
 
 const features = [
   {
@@ -7,7 +7,6 @@ const features = [
     desc: "Standalone deployment on Meta Quest 3S with Unity-powered, low-latency photorealistic rendering — no external hardware or infrastructure required.",
     tag: "Standalone XR",
     icon: Headset,
-    span: "md:col-span-2",
     testid: "feature-card-patient-vr-engine",
   },
   {
@@ -15,7 +14,6 @@ const features = [
     desc: "WebSocket live control of scenario intensity: stepwise triggers, weather, lighting and audio modifiers, plus instant freeze back to a safe space.",
     tag: "Live Control",
     icon: SlidersHorizontal,
-    span: "",
     testid: "feature-card-therapist-console",
   },
   {
@@ -23,16 +21,7 @@ const features = [
     desc: "Immersive procedural training for healthcare professionals and medical students — hands-on spatial simulation labs for MedTech and EdTech.",
     tag: "MedTech · EdTech",
     icon: GraduationCap,
-    span: "",
     testid: "feature-card-interactive-learning",
-  },
-  {
-    title: "HIPAA Cloud Backend",
-    desc: "Encrypted session logging with automated SUDS reporting and time-stamped clinician annotations synced to the EHR.",
-    tag: "Compliance",
-    icon: ShieldCheck,
-    span: "md:col-span-2",
-    testid: "feature-card-hipaa-cloud",
   },
 ];
 
@@ -55,7 +44,7 @@ export default function Features() {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="mt-4 max-w-2xl font-display text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl"
       >
-        A three-pillar, <span className="text-gradient-cv">non-biometric framework.</span>
+        A clinician-guided, <span className="text-gradient-cv">non-biometric framework.</span>
       </motion.h2>
 
       <div className="mt-14 grid gap-5 md:grid-cols-3">
@@ -68,7 +57,7 @@ export default function Features() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -6 }}
-            className={`group relative overflow-hidden rounded-2xl glass-card p-8 transition-shadow duration-500 hover:shadow-[0_0_36px_rgba(0,242,254,0.14)] ${f.span}`}
+            className={`group relative overflow-hidden rounded-2xl glass-card p-8 transition-shadow duration-500 hover:shadow-[0_0_36px_rgba(0,242,254,0.14)]`}
           >
             <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-gradient-to-tr from-cyan-500/15 to-violet-500/15 blur-2xl transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
             <div className="flex items-center justify-between">

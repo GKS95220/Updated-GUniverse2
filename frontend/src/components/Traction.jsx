@@ -117,7 +117,7 @@ export default function Traction() {
             ))}
           </div>
           <p className="mt-6 font-mono-gu text-xs text-slate-500">
-            Projected ARR trajectory: $0.4M → $1.8M → $5.2M → $12.5M across Years 1–4, driven by clinician subscriptions at $299/seat/mo.
+            Projected ARR trajectory: $0.4M → $1.8M → $5.2M → $12.5M across Years 1–4.
           </p>
         </div>
       </div>
