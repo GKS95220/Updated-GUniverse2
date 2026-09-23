@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { BadgeCheck } from "lucide-react";
 
 const stats = [
   { value: 60, suffix: "%", label: "Stress reduction observed in therapeutic VR sessions", testid: "traction-stat-stress" },
@@ -49,7 +48,7 @@ export default function Traction() {
     <section id="traction" data-testid="traction-section" className="relative border-y border-slate-800/70 bg-[#070a1c] py-24">
       <div className="grid-texture pointer-events-none absolute inset-0 opacity-50" />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="flex flex-wrap items-center gap-4">
+        <div>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -59,16 +58,6 @@ export default function Traction() {
           >
             05 — Clinical Efficacy & Traction
           </motion.p>
-          <motion.span
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            data-testid="nirmaan-badge"
-            className="flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1.5 font-mono-gu text-[11px] uppercase tracking-[0.16em] text-emerald-300"
-          >
-            <BadgeCheck size={13} /> Nirmaan Summer Cohort '25
-          </motion.span>
         </div>
         <motion.h2
           initial={{ opacity: 0, y: 24 }}

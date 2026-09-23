@@ -56,8 +56,8 @@ export default function About() {
             className="mt-6 text-sm leading-relaxed text-slate-400 sm:text-base"
           >
             GUniverse Technologies is a pre-seed MedTech & EdTech startup pioneering non-pharmacological
-            healthcare through immersive Extended Reality. Selected for the Nirmaan Summer Cohort '25, our
-            platform is architected directly by our Founder & CTO — a multi-planetary VR ecosystem for
+            healthcare through immersive Extended Reality. Our platform is architected directly by our
+            Founder & CTO — a multi-planetary VR ecosystem for
             mental well-being and physical rehabilitation, headquartered in New Delhi, India.
           </motion.p>
 
