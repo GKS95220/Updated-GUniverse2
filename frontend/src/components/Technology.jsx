@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { Layers, Cpu, Radio, Database } from "lucide-react";
+import { Headset, Gamepad2, Radio, BrainCircuit } from "lucide-react";
 
 const stack = [
   {
-    icon: Layers,
-    title: "Spatial Engine",
-    desc: "Real-time 3D scene orchestration with adaptive difficulty, haptics hooks, and multi-user sync.",
+    icon: Headset,
+    title: "Hardware Foundation",
+    desc: "Meta Quest 3S (128 GB) standalone VR — fully wireless clinical deployment with zero PC infrastructure.",
   },
   {
-    icon: Cpu,
-    title: "WebXR Runtime",
-    desc: "One codebase deploys to browsers, Meta Quest, Apple Vision Pro, and HTC Vive — zero install friction.",
+    icon: Gamepad2,
+    title: "Unity Real-Time Engine",
+    desc: "Unity-powered rendering with pre-built 3D environments from Unity Store & Sketchfab, plus proprietary Blender models.",
   },
   {
     icon: Radio,
-    title: "Bio-Spatial Telemetry",
-    desc: "Gaze, motion accuracy, reaction latency, and session stress signals streamed live from the headset.",
+    title: "Clinician Control Loop",
+    desc: "Human-in-the-loop safety without automated sensors: SUDS 1–10 feedback, live screen mirroring of the patient's exact POV, and session annotations.",
   },
   {
-    icon: Database,
-    title: "Clinical Analytics Cloud",
-    desc: "Encrypted pipeline aggregating engagement metrics into clinician-ready progress dashboards.",
+    icon: BrainCircuit,
+    title: "Neuroscience Layer",
+    desc: "Binaural beats for brainwave coherence, guided by Harvard brain-wiring research via Dr. Sweta (Limitless Brain Labs) — VR modulates all 5 pain regions.",
   },
 ];
 

@@ -1,38 +1,38 @@
 import { motion } from "framer-motion";
-import { Brain, MonitorSmartphone, GraduationCap, LineChart } from "lucide-react";
+import { Headset, SlidersHorizontal, GraduationCap, ShieldCheck } from "lucide-react";
 
 const features = [
   {
-    title: "Spatial Therapeutics",
-    desc: "Gamified, immersive protocols for physical rehabilitation and exposure therapy — designed to trigger neuro-plasticity and sustain patient adherence.",
-    tag: "Clinical XR",
-    icon: Brain,
+    title: "Patient VR Engine",
+    desc: "Standalone deployment on Meta Quest 3S with Unity-powered, low-latency photorealistic rendering — no external hardware or infrastructure required.",
+    tag: "Standalone XR",
+    icon: Headset,
     span: "md:col-span-2",
-    testid: "feature-card-spatial-therapeutics",
+    testid: "feature-card-patient-vr-engine",
   },
   {
-    title: "WebXR & Standalone Compatibility",
-    desc: "Runs natively across WebXR frameworks and standalone VR hardware — no heavy infrastructure required.",
-    tag: "Cross-Platform",
-    icon: MonitorSmartphone,
+    title: "Therapist Console",
+    desc: "WebSocket live control of scenario intensity: stepwise triggers, weather, lighting and audio modifiers, plus instant freeze back to a safe space.",
+    tag: "Live Control",
+    icon: SlidersHorizontal,
     span: "",
-    testid: "feature-card-webxr-compatibility",
+    testid: "feature-card-therapist-console",
   },
   {
     title: "Interactive Learning",
-    desc: "Immersive MedTech and EdTech modules for intuitive, hands-on spatial training.",
-    tag: "Immersive Edu",
+    desc: "Immersive procedural training for healthcare professionals and medical students — hands-on spatial simulation labs for MedTech and EdTech.",
+    tag: "MedTech · EdTech",
     icon: GraduationCap,
     span: "",
     testid: "feature-card-interactive-learning",
   },
   {
-    title: "Data-Driven Insights",
-    desc: "A full analytics pipeline for monitoring patient engagement and clinical session metrics — visualized in real time.",
-    tag: "Analytics",
-    icon: LineChart,
+    title: "HIPAA Cloud Backend",
+    desc: "Encrypted session logging with automated SUDS reporting and time-stamped clinician annotations synced to the EHR.",
+    tag: "Compliance",
+    icon: ShieldCheck,
     span: "md:col-span-2",
-    testid: "feature-card-data-insights",
+    testid: "feature-card-hipaa-cloud",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function Features() {
         transition={{ duration: 0.7 }}
         className="font-mono-gu text-xs uppercase tracking-[0.25em] text-cyan-400"
       >
-        02 — Core Platform
+        02 — Core System Architecture
       </motion.p>
       <motion.h2
         initial={{ opacity: 0, y: 24 }}
@@ -55,7 +55,7 @@ export default function Features() {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="mt-4 max-w-2xl font-display text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl"
       >
-        One spatial engine. <span className="text-gradient-cv">Four clinical superpowers.</span>
+        A three-pillar, <span className="text-gradient-cv">non-biometric framework.</span>
       </motion.h2>
 
       <div className="mt-14 grid gap-5 md:grid-cols-3">

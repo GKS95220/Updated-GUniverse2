@@ -1,15 +1,16 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Rocket, AlertTriangle, Sparkles, Layers, Globe2, TrendingUp, Handshake } from "lucide-react";
+import { X, Rocket, AlertTriangle, Layers, Orbit, Activity, Globe2, TrendingUp, Handshake } from "lucide-react";
 
 const slides = [
-  { icon: Rocket, chapter: "01 · Vision", title: "Care you step into", body: "A world where therapy and training are immersive 3D experiences — not videos on a screen. GUniverse is building the spatial layer for digital therapeutics." },
-  { icon: AlertTriangle, chapter: "02 · Problem", title: "Passive care fails", body: "Low engagement, poor patient compliance, and static delivery models plague traditional therapeutics and education. Attrition kills outcomes." },
-  { icon: Sparkles, chapter: "03 · Solution", title: "Spatial therapeutics", body: "Gamified XR protocols for rehabilitation and exposure therapy that adapt in real time, sustain adherence, and quantify every session." },
-  { icon: Layers, chapter: "04 · Platform", title: "One engine, every device", body: "WebXR-native runtime deploys to browsers, Meta Quest, Apple Vision Pro and HTC Vive — with a bio-spatial telemetry pipeline built in." },
-  { icon: Globe2, chapter: "05 · Market", title: "Two beachheads", body: "Healthcare & rehab centers (clinical-grade VR therapy) and institutions & enterprises (immersive spatial training) — multi-billion dollar DTx and XR-education markets." },
-  { icon: TrendingUp, chapter: "06 · Traction", title: "Early signals", body: "Working spatial engine prototype, pilot programs in clinical discussion, and 3× engagement observed versus passive protocols in internal testing." },
-  { icon: Handshake, chapter: "07 · The Ask", title: "Join the pilot cohort", body: "We're onboarding clinical and institutional pilot partners now, and opening conversations with pre-seed investors who believe in spatial care." },
+  { icon: Rocket, chapter: "01 · Vision", title: "A multi-planetary VR ecosystem", body: "Clinician-guided immersive environments for exposure therapy, stress reduction, and digital mental healthcare — software-driven and non-biometric by design." },
+  { icon: AlertTriangle, chapter: "02 · Problem", title: "Exposure therapy is stuck", body: "In-vivo is costly and risky. Imaginal depends on patient vividness. And there is zero environment control over triggers." },
+  { icon: Layers, chapter: "03 · Platform", title: "Three-pillar architecture", body: "Patient VR Engine on Meta Quest 3S, a Therapist Console with WebSocket live control and instant freeze, and a HIPAA cloud backend with automated SUDS reporting." },
+  { icon: Orbit, chapter: "04 · Ecosystem", title: "Six therapeutic planets", body: "Calm, Confidence, Focus, Sleep, Phobia Worlds, and Recovery Spaces — targeted modules from anxiety and PTSD to musculoskeletal rehabilitation." },
+  { icon: Activity, chapter: "05 · Clinical Proof", title: "60% stress · 43% pain reduction", body: "Rapid outcomes in average 6-minute sessions. VR modulates all 5 pain-related brain regions — guided by Harvard brain-wiring research and binaural beats." },
+  { icon: Globe2, chapter: "06 · Market & Model", title: "$18.6B market by 2034", body: "VR therapy is growing at 19.3% CAGR. Revenue: $299/seat/mo SaaS for clinics, B2B2C insurance reimbursement pathways, and turnkey hardware bundles." },
+  { icon: TrendingUp, chapter: "07 · Traction & Roadmap", title: "Nirmaan Summer Cohort '25", body: "MVP in build, then pilots with 5 regional psychology clinics, ISO 13485 / SaMD compliance, and national scale. Projected ARR: $0.4M → $12.5M in 4 years." },
+  { icon: Handshake, chapter: "08 · The Ask", title: "Join the pilot cohort", body: "We're onboarding clinical partners and Tier-1 institutions now — and opening conversations with pre-seed investors shaping non-pharmacological care." },
 ];
 
 export default function PitchModal({ open, onClose }) {
@@ -52,7 +53,7 @@ export default function PitchModal({ open, onClose }) {
 
             <p className="font-mono-gu text-xs uppercase tracking-[0.25em] text-cyan-400">GUniverse · Pitch Highlights</p>
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
-              The future of care is <span className="text-gradient-cv">spatial.</span>
+              Next-gen therapeutic VR, <span className="text-gradient-cv">clinician-guided.</span>
             </h2>
 
             <div className="mt-10 space-y-4">

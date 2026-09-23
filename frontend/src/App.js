@@ -8,6 +8,7 @@ import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import Manifesto from "@/components/Manifesto";
 import Features from "@/components/Features";
+import Ecosystem from "@/components/Ecosystem";
 import Markets from "@/components/Markets";
 import Technology from "@/components/Technology";
 import Traction from "@/components/Traction";
@@ -51,6 +52,7 @@ function Landing() {
         <Marquee />
         <Manifesto />
         <Features />
+        <Ecosystem />
         <Markets />
         <Technology />
         <Traction />

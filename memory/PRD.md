@@ -40,7 +40,18 @@ Sleek, modern, futuristic, professional landing page for GUniverse — a pre-see
 - Real notification inbox connected: lead alerts now send to G.k.sharma95220@gmail.com (verified 202 Accepted via managed Resend proxy)
 - User's real logo integrated: cropped orbital mark saved to frontend/public/guniverse-logo.png, used in nav, footer, and admin login via the shared Logo component
 
+## Implemented (2026-09-23, iteration 4)
+- Website content rebuilt precisely from user's two PDFs (Therapeutic VR Blueprint + Technology Presentation):
+  - Problem/Solution: in-vivo cost/risk, imaginal variability, no environment control vs safe simulations, real-time trigger adjustment, SUDS + EHR logging
+  - Platform: Patient VR Engine (Quest 3S + Unity), Therapist Console (WebSocket live control, instant freeze), HIPAA Cloud Backend
+  - New Ecosystem section: 6 planetary modules (Calm, Confidence, Focus, Sleep, Phobia Worlds, Recovery Spaces)
+  - Markets: 3 tabs — Health Institutes (MedTech), Tier-1 Educational Institutes (EdTech), Direct Patients (B2C, incl. Dry Eye treatment)
+  - Technology: Quest 3S 128GB, Unity + Sketchfab/Blender pipeline, clinician control loop (SUDS 1-10, live mirror), neuroscience layer (binaural beats, 5 pain regions, Dr. Sweta / Limitless Brain Labs)
+  - Traction: 60% stress / 43% pain reduction, 6-min sessions, $18.6B market by 2034 (19.3% CAGR), Nirmaan Summer Cohort '25 badge, 4-phase roadmap (MVP → 5 clinic pilots → ISO 13485/SaMD → national), ARR $0.4M→$12.5M
+  - About: non-pharmacological mission, Nirmaan cohort, research backing (Harvard brain wiring, Hanyang ACT, J. Orthopaedic Surgery 2025)
+  - Pitch modal: 8 chapters mirroring the real deck incl. $299/seat/mo SaaS + B2B2C + hardware bundles
+
 ## Backlog
 - P0: None
 - P1: Real social links (LinkedIn URL)
-- P2: Downloadable pitch deck PDF, lead CSV export, reply-to-lead from dashboard, favicon from logo
+- P2: Downloadable pitch deck PDF (use uploaded PDFs), lead CSV export, reply-to-lead from dashboard, favicon from logo

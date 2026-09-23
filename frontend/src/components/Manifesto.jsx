@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import { AlertTriangle, CheckCircle2 } from "lucide-react";
 
 const problems = [
-  "Traditional therapeutics struggle with low engagement and non-immersive patient compliance.",
-  "Static delivery models fail to adapt to individual recovery trajectories and learning speeds.",
-  "Clinical progress is tracked subjectively, without objective bio-spatial data.",
+  "In-vivo exposure therapy carries high cost and real safety risks for patients.",
+  "Imaginal therapy relies on the patient — vividness varies, outcomes are inconsistent.",
+  "Zero environment control means unpredictable triggers mid-session.",
 ];
 
 const solutions = [
-  "Dynamic 3D spatial experiences replace passive treatments, boosting engagement and adherence.",
-  "Gamified protocols adapt in real time to each patient's performance and therapy stage.",
-  "Every session feeds an analytics pipeline that quantifies progress and clinical outcomes.",
+  "Safe simulations: repeatable, controlled clinical conditions in photorealistic multi-sensory scenes.",
+  "Real-time adjustment: the therapist alters trigger intensity instantly, session by session.",
+  "Every session is logged — SUDS scores and time-stamped annotations flow straight to the EHR.",
 ];
 
 const Chapter = ({ number, title, children }) => (
@@ -47,7 +47,7 @@ export default function Manifesto() {
         transition={{ duration: 0.7 }}
         className="font-mono-gu text-xs uppercase tracking-[0.25em] text-cyan-400"
       >
-        01 — The Manifesto
+        01 — The Paradigm Shift
       </motion.p>
       <motion.h2
         initial={{ opacity: 0, y: 24 }}
@@ -56,12 +56,12 @@ export default function Manifesto() {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="mt-4 max-w-2xl font-display text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl"
       >
-        Passive care is broken. <span className="text-gradient-cv">Spatial care is the answer.</span>
+        Replacing static imagination <span className="text-gradient-cv">with controlled digital immersion.</span>
       </motion.h2>
 
       <div className="mt-16 grid gap-14 lg:grid-cols-2 lg:gap-20">
         <div data-testid="problem-card">
-          <Chapter number="CH.01" title="The Problem">
+          <Chapter number="CH.01" title="Traditional Exposure Therapy">
             <ul className="space-y-4">
               {problems.map((p, i) => (
                 <Item key={i} icon={AlertTriangle} tone="text-rose-400" delay={i * 0.12}>
@@ -72,7 +72,7 @@ export default function Manifesto() {
           </Chapter>
         </div>
         <div data-testid="solution-card">
-          <Chapter number="CH.02" title="The GUniverse Solution">
+          <Chapter number="CH.02" title="The GUniverse Platform">
             <ul className="space-y-4">
               {solutions.map((s, i) => (
                 <Item key={i} icon={CheckCircle2} tone="text-cyan-400" delay={i * 0.12}>

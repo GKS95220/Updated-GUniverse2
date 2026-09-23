@@ -1,31 +1,51 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HeartPulse, Building2, ArrowUpRight } from "lucide-react";
+import { HeartPulse, Building2, UserRound, ArrowUpRight } from "lucide-react";
 
 const markets = {
   healthcare: {
-    title: "Healthcare & Rehab Centers",
-    desc: "Clinical-grade VR therapy with patient progress tracking and remote care integration.",
+    title: "Health Institutes & Professionals",
+    vertical: "MedTech",
+    desc: "Clinical-grade VR therapy that integrates directly into existing care pathways.",
     cases: [
-      "Physical & occupational therapy gamification",
-      "Neurological recovery & stroke rehabilitation",
-      "Pain management & exposure therapy clinics",
-      "Remote care integration with live progress telemetry",
+      "Clinical therapy integration for outpatient mental health clinics",
+      "Non-pharmacological pain management — reducing analgesic & opioid dependency",
+      "Digital CBT & ACT tools for anxiety, trauma, and phobia treatment",
+      "Physical & musculoskeletal rehabilitation protocols",
     ],
-    image: "https://images.pexels.com/photos/8721326/pexels-photo-8721326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    image: "https://images.unsplash.com/photo-1758691462668-046fd85ceac9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwzfHxmdXR1cmlzdGljJTIwaGVhbHRoY2FyZSUyMGRpZ2l0YWwlMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc4OTc5MjM4MXww&ixlib=rb-4.1.0&q=85",
   },
-  enterprises: {
-    title: "Institutions & Enterprises",
-    desc: "Interactive training simulations and immersive spatial learning platforms at scale.",
+  institutions: {
+    title: "Tier-1 Educational Institutes",
+    vertical: "EdTech",
+    desc: "Immersive spatial learning platforms that double as student well-being infrastructure.",
     cases: [
-      "Medical universities & surgical training schools",
-      "Corporate ergonomics & mental wellness programs",
-      "Defense & aerospace medical training",
-      "XR hardware vendors & DTx distribution partners",
+      "Student mental well-being and stress regulation programs",
+      "Focus enhancement and cognitive attention training",
+      "Medical simulation labs for procedural training",
+      "Virtual public speaking and confidence-building environments",
     ],
     image: "https://images.pexels.com/photos/3183176/pexels-photo-3183176.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   },
+  patients: {
+    title: "Direct Patients",
+    vertical: "B2C MedTech",
+    desc: "Home-based therapeutic VR that puts clinical-grade care in the patient's hands.",
+    cases: [
+      "Chronic pain relief through immersive distraction therapy",
+      "Dry Eye Syndrome treatment via lipid-layer stimulation",
+      "Sleep improvement and circadian alignment protocols",
+      "Guided anxiety relief in calming biophilic spaces",
+    ],
+    image: "https://images.pexels.com/photos/8721326/pexels-photo-8721326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  },
 };
+
+const tabs = [
+  { key: "healthcare", label: "Healthcare", icon: HeartPulse, testid: "target-market-tab-healthcare" },
+  { key: "institutions", label: "Institutions", icon: Building2, testid: "target-market-tab-enterprises" },
+  { key: "patients", label: "Patients", icon: UserRound, testid: "target-market-tab-patients" },
+];
 
 export default function Markets() {
   const [active, setActive] = useState("healthcare");
@@ -40,7 +60,7 @@ export default function Markets() {
         transition={{ duration: 0.7 }}
         className="font-mono-gu text-xs uppercase tracking-[0.25em] text-cyan-400"
       >
-        03 — Target Markets
+        04 — Target Markets
       </motion.p>
       <motion.h2
         initial={{ opacity: 0, y: 24 }}
@@ -49,32 +69,24 @@ export default function Markets() {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="mt-4 max-w-2xl font-display text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl"
       >
-        Built for the wards <span className="text-gradient-cv">and the classrooms.</span>
+        Built for clinics, campuses, <span className="text-gradient-cv">and living rooms.</span>
       </motion.h2>
 
-      <div className="mt-10 flex gap-3">
-        <button
-          data-testid="target-market-tab-healthcare"
-          onClick={() => setActive("healthcare")}
-          className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
-            active === "healthcare"
-              ? "bg-gradient-to-r from-cyan-400 to-violet-500 text-[#050714] shadow-[0_0_20px_rgba(0,242,254,0.3)]"
-              : "border border-slate-700/70 text-slate-300 hover:border-cyan-400/50 hover:text-cyan-300"
-          }`}
-        >
-          <HeartPulse size={16} /> Healthcare
-        </button>
-        <button
-          data-testid="target-market-tab-enterprises"
-          onClick={() => setActive("enterprises")}
-          className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
-            active === "enterprises"
-              ? "bg-gradient-to-r from-cyan-400 to-violet-500 text-[#050714] shadow-[0_0_20px_rgba(0,242,254,0.3)]"
-              : "border border-slate-700/70 text-slate-300 hover:border-cyan-400/50 hover:text-cyan-300"
-          }`}
-        >
-          <Building2 size={16} /> Institutions
-        </button>
+      <div className="mt-10 flex flex-wrap gap-3">
+        {tabs.map((t) => (
+          <button
+            key={t.key}
+            data-testid={t.testid}
+            onClick={() => setActive(t.key)}
+            className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
+              active === t.key
+                ? "bg-gradient-to-r from-cyan-400 to-violet-500 text-[#050714] shadow-[0_0_20px_rgba(0,242,254,0.3)]"
+                : "border border-slate-700/70 text-slate-300 hover:border-cyan-400/50 hover:text-cyan-300"
+            }`}
+          >
+            <t.icon size={16} /> {t.label}
+          </button>
+        ))}
       </div>
 
       <AnimatePresence mode="wait">
@@ -87,7 +99,12 @@ export default function Markets() {
           className="mt-10 grid items-center gap-10 lg:grid-cols-2"
         >
           <div>
-            <h3 className="font-display text-xl font-semibold text-white sm:text-2xl">{m.title}</h3>
+            <div className="flex items-center gap-3">
+              <h3 className="font-display text-xl font-semibold text-white sm:text-2xl">{m.title}</h3>
+              <span className="rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 font-mono-gu text-[10px] uppercase tracking-[0.18em] text-violet-300">
+                {m.vertical}
+              </span>
+            </div>
             <p className="mt-3 text-sm leading-relaxed text-slate-400 sm:text-base">{m.desc}</p>
             <ul className="mt-8 space-y-4">
               {m.cases.map((c, i) => (
@@ -98,7 +115,7 @@ export default function Markets() {
                   transition={{ duration: 0.45, delay: 0.1 + i * 0.08 }}
                   className="group flex items-center gap-3 text-sm text-slate-300 sm:text-base"
                 >
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 transition-all duration-300 group-hover:shadow-[0_0_12px_rgba(0,242,254,0.4)]">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 transition-all duration-300 group-hover:shadow-[0_0_12px_rgba(0,242,254,0.4)]">
                     <ArrowUpRight size={13} />
                   </span>
                   {c}

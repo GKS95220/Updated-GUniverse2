@@ -1,22 +1,22 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Orbit, ShieldCheck, Microscope } from "lucide-react";
+import { Pill, HandHeart, Microscope } from "lucide-react";
 
 const pillars = [
   {
-    icon: Orbit,
-    title: "Spatial-First",
-    desc: "We design therapy and learning as native 3D experiences, not flat content ported to a headset.",
+    icon: Pill,
+    title: "Non-Pharmacological First",
+    desc: "Drug-free digital therapeutics for pain, stress, and sleep — even Dry Eye Syndrome, by stimulating the eye's protective lipid layer.",
   },
   {
-    icon: ShieldCheck,
-    title: "Clinically Grounded",
-    desc: "Every protocol is built with clinicians and mapped to measurable therapeutic outcomes.",
+    icon: HandHeart,
+    title: "Clinician-Guided",
+    desc: "Human-in-the-loop by design: therapists control every trigger in real time — no automated sensor black boxes.",
   },
   {
     icon: Microscope,
-    title: "Evidence-Driven",
-    desc: "Continuous session analytics turn every interaction into research-grade insight.",
+    title: "Research-Backed",
+    desc: "Grounded in Harvard brain-wiring research, ACT frameworks from Hanyang University, and rehabilitation findings from the Journal of Orthopaedic Surgery and Research (2025).",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function About() {
         transition={{ duration: 0.7 }}
         className="font-mono-gu text-xs uppercase tracking-[0.25em] text-cyan-400"
       >
-        05 — About Us
+        06 — About Us
       </motion.p>
 
       <div className="mt-12 grid items-center gap-14 lg:grid-cols-2">
@@ -46,7 +46,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="font-display text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl"
           >
-            A universe where care <span className="text-gradient-cv">surrounds you.</span>
+            Shaping the future of <span className="text-gradient-cv">medicine, without pills.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -55,10 +55,10 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="mt-6 text-sm leading-relaxed text-slate-400 sm:text-base"
           >
-            GUniverse is a pre-seed startup at the intersection of Extended Reality, spatial computing, and
-            digital therapeutics. We believe the next generation of healthcare and education won't be watched
-            on screens — it will be experienced in space. Our team spans clinical research, real-time 3D
-            engineering, and immersive learning design.
+            GUniverse Technologies is a pre-seed MedTech & EdTech startup pioneering non-pharmacological
+            healthcare through immersive Extended Reality. Selected for the Nirmaan Summer Cohort '25, our
+            platform is architected directly by our Founder & CTO — a multi-planetary VR ecosystem for
+            mental well-being and physical rehabilitation, headquartered in New Delhi, India.
           </motion.p>
 
           <div className="mt-10 space-y-6">
@@ -96,7 +96,7 @@ export default function About() {
             <div className="absolute bottom-5 left-5 right-5 rounded-xl glass-card p-4">
               <p className="font-mono-gu text-[10px] uppercase tracking-[0.2em] text-cyan-300">Our Mission</p>
               <p className="mt-1.5 text-sm text-slate-200">
-                Make immersive, measurable therapy as accessible as opening a browser.
+                Make non-pharmacological, immersive therapy as accessible as putting on a headset.
               </p>
             </div>
           </div>
