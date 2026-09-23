@@ -20,7 +20,7 @@ const stack = [
   {
     icon: BrainCircuit,
     title: "Neuroscience Layer",
-    desc: "Binaural beats for brainwave coherence, guided by Harvard brain-wiring research via Dr. Sweta (Limitless Brain Labs) — VR modulates all 5 pain regions.",
+    desc: "Binaural beats for brainwave coherence, guided by Harvard brain-wiring research — VR modulates all 5 pain regions.",
   },
 ];
 
